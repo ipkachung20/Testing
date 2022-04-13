@@ -1,5 +1,5 @@
 import streamlit as st
-from transformers import BertForQuestionAnswering, AutoTokenizer
+from transformers import BertForQuestionAnswering, AutoTokenizer, pipeline
 
 model = BertForQuestionAnswering.from_pretrained('deepset/bert-base-cased-squad2')
 tokenizer = AutoTokenizer.from_pretrained('deepset/bert-base-cased-squad2')
