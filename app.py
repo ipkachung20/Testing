@@ -13,3 +13,5 @@ nlp({
     'question': Q[0],
     'context': context
 })
+
+write(nlp.answer)
