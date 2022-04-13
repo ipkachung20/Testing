@@ -1,12 +1,12 @@
 import streamlit as st
 from transformers import BertForQuestionAnswering, AutoTokenizer, pipeline
 
-model_name = BertForQuestionAnswering.from_pretrained('deepset/bert-base-cased-squad2')
-model_name = AutoTokenizer.from_pretrained('deepset/bert-base-cased-squad2')
+model = BertForQuestionAnswering.from_pretrained('deepset/bert-base-cased-squad2')
+model = AutoTokenizer.from_pretrained('deepset/bert-base-cased-squad2')
 
 @st.cache(allow_output_mutation=True)
 def load_qa_model():
-    model = pipeline('question-answering', model=model_name, tokenizer=model_name)
+    model = pipeline('question-answering', model=model, tokenizer=model)
     return model
 
 qa = load_qa_model()
