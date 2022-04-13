@@ -14,4 +14,4 @@ nlp({
     'context': context
 })
 
-write(nlp.answer)
+st.write(nlp.answer)
