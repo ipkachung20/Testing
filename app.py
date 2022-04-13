@@ -11,7 +11,10 @@ context = st.text_area('Please paste your article :', height=30)
 Q = st.text_input("Questions from this article?")
 button = st.button("Get me Answers")
 
+st.write(Q[0])
+st.write(context)
+
 with st.spinner("Discovering Answers.."):
-    if button and sentence:
+    if button and context:
         answers = nlp({'question': Q[0],'context': context}).get('answer')
         st.write(answers['answer'])
